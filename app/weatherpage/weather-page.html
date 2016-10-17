@@ -1,0 +1,14 @@
+﻿<div ng-cloak>
+    <div class="hero" data-bg-image="images/banner.png">
+        <div class="container">
+            <form name="search" class="find-location" ng-submit="searchHandler(searchTerm)">
+                <input ng-model="searchTerm" type="text" placeholder="Find your location...">
+                <input type="submit" value="Find">
+            </form>
+        </div>
+    </div>
+
+    <weather-widget forecastlist="forecast" weather="weath" ng-if="weath"></weather-widget>
+
+   
+</div>

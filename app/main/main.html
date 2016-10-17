@@ -1,0 +1,24 @@
+﻿
+
+  
+        <div class="hero" >
+            <div class="container">
+                <form name="search"  class="find-location" ng-if="geolocPermDenied || geolocNotSupported" ng-submit="searchHandler(searchTerm)">
+                    <input type="text" ng-model="searchTerm" placeholder="search by city name or zip code">
+                    <input type="submit" value="Find">
+                </form>
+                
+                <div class="hero" style="text-align:center;margin-top:20px">
+                    <h1>GeoWeather uses Geolocation to show local weather</h1>
+                    <span class="color-bg">Please allow Geolocation to access your location </span>
+                </div>
+                <div class="hero" style="text-align:center;margin-top:20px" ng-show="geolocNotSupported">
+                    <h1>Geolocation is not supported.</h1>
+                    <span class="color-bg">Please use textbox above to search by your city name or zip code</span>
+                </div>
+            </div>
+        </div>
+
+      
+   
+       
