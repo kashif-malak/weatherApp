@@ -2,7 +2,7 @@
 (function () {
     'use strict';
 
-    angular.module('geoWeather.main', ['ui.router'])
+    angular.module('geoWeather.main', [])
     .controller('MainCtrl', 
                 function ($scope, GeolocationService, $window, $state, WeatherjsonpSvc) {
 
@@ -24,29 +24,8 @@
                         $scope.geolocNotSupported = true;  /* geolocation IS NOT available */
                     }
 
-                    //if ($window.navigator.permissions.query({ 'name': 'geolocation' })
-                    //    .then(function (permission) {
-                    //    console.log(permission);
-
-                    //    switch (permission.state) {
-                    //    case 'granted':
-                    //     $state.go('Weather', { });
-                    //        break;
-
-                    //    case 'denied':
-                    //    $scope.geolocPermDenied = true;
-                    //        break;
-
-                    //    case 'prompt':
-                    //    alert('Please allow geolocation to access your location data.');
-                    //        break;
-                    //    default:
-
-                    //    };
-                    //}));
-
                     $scope.searchHandler = function (searchTerm) {
-                        console.log(searchTerm);
+
                         if (isNaN(searchTerm)) {
                             WeatherjsonpSvc.findByCityName(searchTerm)
                                                 .then(success, error);

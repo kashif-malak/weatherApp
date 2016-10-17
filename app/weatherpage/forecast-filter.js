@@ -9,10 +9,9 @@
        
         return function (weatherData) {
             var result = [];
-            weatherData.$promise.then(function (weather) {
 
-                if (weather.data.list != null) {
-                    weather.data.list.forEach(function (alem,index,arr) {
+            if (weatherData!= null) {
+                weatherData.forEach(function (alem, index, arr) {
                         var date = alem.dt_txt.slice(0, 10);
                         if (!this[date]) {
                             this[date] = { date: date, max: 0, min : 0 };
@@ -26,9 +25,7 @@
                     result.splice(0, 1);
 
                 };
-            });
-
-           
+  
             return result;
         }
 

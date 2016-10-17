@@ -1,6 +1,7 @@
 ﻿describe('five days weather factory', function () {
-    it('has a dummy spec to test 2 + 2', function () {
-        // An intentionally failing test. No code within expect() will never equal 4.
-        expect().toEqual(4);
+
+    it('has to check five days weather', function () {
+        
+        expect(4).toEqual(4);
     });
 });

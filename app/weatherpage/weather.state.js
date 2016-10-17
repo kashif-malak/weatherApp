@@ -11,21 +11,13 @@
                         templateUrl: "weatherpage/weather-page.html",
                         controller: 'WeatherCtrl',
                         resolve: {
-                            weathNow: ['$stateParams', 'WeatherService', 'AppConstants', function ($stateParams, WeatherService, AppConstants) {
-                                return WeatherService.get({ lat: $stateParams.lat, lon: $stateParams.lon, APPID: AppConstants.APIKEY},
-                            function (weatherData) {
-                                return weatherData.data;
-                            });
+                            weathNow: ['$stateParams', 'WeatherjsonpSvc', function ($stateParams, WeatherjsonpSvc) {
+                                      return WeatherjsonpSvc.findByPosition($stateParams.lat, $stateParams.lon )
                             }],
-                            forecast: ['$stateParams', 'FiveDaysWeathService', 'AppConstants', function ($stateParams, FiveDaysWeathService, AppConstants) {
-                                return FiveDaysWeathService.get({
-                                 lat: $stateParams.lat, lon: $stateParams.lon, APPID: AppConstants.APIKEY
-                                }, function (weatherData) {
-                                   return weatherData;
-                                });
+                            forecast: ['$stateParams', 'WeatherjsonpSvc',  function ($stateParams, WeatherjsonpSvc) {
+                                      return WeatherjsonpSvc.weatherForcast($stateParams.lat, $stateParams.lon);
                             }]
                         },
                     });
             });
-
 })();

@@ -10,7 +10,7 @@
                     <div class="location">{{weather.name}} ,{{weather.sys.country}}</div>
                     <p>{{weather.weather[0].description}}</p>
                     <div class="degree">
-                        <div class="num">{{weather.main.temp}}<sup>o</sup>C</div>
+                        <div class="num">{{weather.main.temp | number:0}}<sup>o</sup>C</div>
                         <div class="forecast-icon">
                             <img ng-src="http://openweathermap.org/img/w/{{weather.weather[0].icon}}.png" width="90" class=" text-center">
                         </div>
@@ -20,16 +20,16 @@
                     <span><img ng-src="images/icon-compass.png" alt="">{{weather.wind.deg}}</span>
                 </div>
             </div>
-            <div class="forecast" ng-repeat="forecast in forecastlist">
+            <div class="forecast" ng-repeat="forecast in forecastlist | limitTo:6" ng-if="!$first">
                 <div class="forecast-header">
-                    <div class="day">{{forecast.date | date:'EEEE,d'}}</div>
+                    <div class="day">{{forecast.dt * 1000 | date:'EEEE,d'}}</div>
                 </div> <!-- .forecast-header -->
                 <div class="forecast-content">
                     <div class="forecast-icon">
-                        <img ng-src="http://openweathermap.org/img/w/{{forecast.icon}}.png" alt="" width=48>
+                        <img ng-src="http://openweathermap.org/img/w/{{forecast.weather[0].icon}}.png" alt="" width=48>
                     </div>
-                    <div class="degree">{{forecast.max}}<sup>o</sup>C</div>
-                    <small>{{forecast.min}}<sup>o</sup></small>
+                    <div class="degree">{{forecast.temp.max | number:0}}<sup>o</sup>C</div>
+                    <small>{{forecast.temp.min | number:0}}<sup>o</sup></small>
                 </div>
             </div>
 

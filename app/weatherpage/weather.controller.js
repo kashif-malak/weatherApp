@@ -1,13 +1,13 @@
-﻿/// <reference path="../services/weath-forcast.service.js" />
+﻿
 
 (function () {
     'user strict'
 
     angular
         .module('geoWeather.weather')
-    .controller('WeatherCtrl', function ($scope, weathNow, $filter, forecast, WeatherjsonpSvc,$state) {
+    .controller('WeatherCtrl', function ($scope, weathNow, $filter, forecast, WeatherjsonpSvc, $state, $stateParams) {
 
-        $scope.forecast = $filter('forecastFilter')(forecast);
+        $scope.forecast = forecast.list;
         $scope.weath = weathNow;
         
         $scope.searchHandler = function (searchTerm) {
