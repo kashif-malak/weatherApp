@@ -13,6 +13,13 @@ npm install
 
 
 
+this project is based on angular-seed project by angular team.
+
+
+
+
+
+
 
 
 
