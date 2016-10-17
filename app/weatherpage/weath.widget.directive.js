@@ -1,6 +1,6 @@
 ﻿(function () {
     angular
-        .module("geoWheather.weather")
+        .module("geoWeather.weather")
 
     .directive('weatherWidget', function () {
         return {

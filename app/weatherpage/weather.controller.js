@@ -4,7 +4,7 @@
     'user strict'
 
     angular
-        .module('geoWheather.weather')
+        .module('geoWeather.weather')
     .controller('WeatherCtrl', function ($scope, weathNow, $filter, forecast, WeatherjsonpSvc,$state) {
 
         $scope.forecast = $filter('forecastFilter')(forecast);

@@ -9,7 +9,6 @@
     <title>GoeWeather App</title>
     <!-- Loading third party fonts -->
     <link href="http://fonts.googleapis.com/css?family=Roboto:300,400,700|" rel="stylesheet" type="text/css">
-    <link href="fonts/font-awesome.min.css" rel="stylesheet" type="text/css">
     <!-- Loading main css file -->
 
     <link href="style.css" rel="stylesheet" />
@@ -19,7 +18,7 @@
     <script src="js/ie-support/respond.js"></script>
     <![endif]-->
 </head>
-<body ng-app="geoWheather">
+<body ng-app="geoWeather">
 
     <!--[if lt IE 7]>
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -39,9 +38,9 @@
                     <button type="button" class="menu-toggle"><i class="fa fa-bars"></i></button>
                     <ul class="menu">
                         <li class="menu-item current-menu-item"><a href="index.html">Home</a></li>
-                        <li class="menu-item"><a href="news.html">Search</a></li>
-                        <li class="menu-item"><a href="live-cameras.html">About Me</a></li>
-                        <li class="menu-item"><a href="contact.html">Contact</a></li>
+                        <li class="menu-item"><a href="#">Search</a></li>
+                        <li class="menu-item"><a href="#">About Me</a></li>
+                        <li class="menu-item"><a href="#">Contact</a></li>
                     </ul> <!-- .menu -->
                 </div> <!-- .main-navigation -->
                 <div class="mobile-navigation"></div>
@@ -49,13 +48,7 @@
         </div> <!-- .site-header -->
 
         <div ui-view></div>
-        <!-- In production use:
-        <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
-        -->
-
-
-
-
+       
         <div class="fullwidth-block" data-bg-color="#262936">
             <div class="container">
                 <div class="row">
@@ -114,13 +107,9 @@
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
-    <script src="bower_components/d3/d3.js"></script>
-    <script src="view1/angular-charts.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="bower_components/angular-resource/angular-resource.min.js"></script>
     <script src="app.js"></script>
-    <script src="view1/view1.js"></script>
-    <script src="view2/view2.js"></script>
     <script src="services/weather.service.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="services/fivedays.weather.service.js"></script>

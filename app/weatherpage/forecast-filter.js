@@ -2,13 +2,12 @@
 (function () {
     'user strict'
 
-    angular.module('geoWheather.weather')
+    angular.module('geoWeather.weather')
 
 
     .filter('forecastFilter', function () {
        
         return function (weatherData) {
-            console.log(weatherData);
             var result = [];
             weatherData.$promise.then(function (weather) {
 

@@ -1,7 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    angular.module('geoWheather')
+    angular.module('geoWeather')
 
     .factory('GeolocationService', [
       '$q', '$window',

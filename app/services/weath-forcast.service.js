@@ -1,6 +1,6 @@
 (function () {
     angular
-        .module('geoWheather')
+        .module('geoWeather')
 
     .factory("WeatherjsonpSvc", ['$q', '$http', 'AppConstants', function ($q, $http, AppConstants) {
 

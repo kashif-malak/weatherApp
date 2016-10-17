@@ -2,7 +2,7 @@
 (function () {
     'use strict';
 
-    angular.module('geoWheather.main', ['ui.router'])
+    angular.module('geoWeather.main', ['ui.router'])
     .controller('MainCtrl', 
                 function ($scope, GeolocationService, $window, $state, WeatherjsonpSvc) {
 

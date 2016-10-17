@@ -1,6 +1,6 @@
 ﻿(function () {
 
-    angular.module('geoWheather')
+    angular.module('geoWeather')
 
         .constant("AppConstants", {
             "APIKEY": "66a3d0941e614b3050f05912a908b65b",

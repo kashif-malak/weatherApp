@@ -1,12 +1,12 @@
 (function () {
     'use strict';
 
-    angular.module('geoWheather', [
+    angular.module('geoWeather', [
       'ui.router',
       'ngResource',
       'ngAnimate',
-      'geoWheather.main',      
-      'geoWheather.weather',
+      'geoWeather.main',
+      'geoWeather.weather',
     ])
           .run(function ($rootScope, $window, GeolocationService, $state,$location) {
               $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {

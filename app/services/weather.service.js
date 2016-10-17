@@ -2,7 +2,7 @@
     'use strict';
 
     angular
-        .module('geoWheather')
+        .module('geoWeather')
         .factory('WeatherService', Weather);
 
     Weather.$inject = ['$resource'];

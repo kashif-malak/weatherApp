@@ -1,10 +1,9 @@
-﻿/// <reference path="../services/weath-forcast.service .js" />
-
+﻿
 (function () {
     'use strict';
 
     angular
-        .module('geoWheather.weather', [])
+        .module('geoWeather.weather', [])
             .config(function ($stateProvider) {
                 $stateProvider
                     .state('Weather', {
