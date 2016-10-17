@@ -10,9 +10,7 @@ npm install
 
 To Run
 
-`````````
-nm start
-`````````
+
 
 
 
