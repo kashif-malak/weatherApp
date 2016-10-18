@@ -16,7 +16,7 @@ module.exports = function(config) {
       './app.js',
       'tests/**/*.js',
       'main/main.js',
-      'services/*.js',
+      'services/AppConstants.js',
       'weatherpage/weather.state.js',
       'weatherpage/forecast-filter.js',
       'weatherpage/*.js'

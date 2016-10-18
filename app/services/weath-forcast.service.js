@@ -13,7 +13,7 @@
             findByCityName: findByCityNameFunc,
             findByZipCode: findByZipCodeFunc,
             findByCityCode: findByCityCodeFunc,
-            weatherForcast: forcastByPosition
+            weatherForcast: forecastByPosition
         };
 
        function request(path) {
@@ -42,36 +42,35 @@
        
            
         function findByPositionFunc (lat, lng) {
-            var path = "/weather?APPID=" + APPID + "&lat=" + lat + "&lon=" + lng + "&units=metric";
-            return request(path);
+               var path = "/weather?APPID=" + APPID + "&lat=" + lat + "&lon=" + lng + "&units=metric";
+               return request(path);
         };
         function findByCityNameFunc (cityName) {
-            var path = "/weather?APPID=" + APPID + "&q=" + cityName + "&units=metric";
-            return request(path);
+               var path = "/weather?APPID=" + APPID + "&q=" + cityName + "&units=metric";
+               return request(path);
         };
         function findByZipCodeFunc(zip) {
-            var path = "/weather?APPID=" + APPID + "&zip=" + zip + "&units=metric";
-            return request(path);
+               var path = "/weather?APPID=" + APPID + "&zip=" + zip + "&units=metric";
+               return request(path);
         };
         function findByCityCodeFunc(code) {
-            var path = "/weather?APPID=" + APPID + "&id=" + code + "&units=metric";
-            return request(path);
+               var path = "/weather?APPID=" + APPID + "&id=" + code + "&units=metric";
+               return request(path);
         };
 
-        
-
-        function forcastByPosition (lat, lng, units) {
-                var path = "/forecast/daily?APPID=" + APPID + "&lat=" + lat + "&lon=" + lng + "&units=metric";
+        function forecastByPosition (lat, lng, units) {
+                var unit = units || 'metric';
+                var path = "/forecast/daily?APPID=" + APPID + "&lat=" + lat + "&lon=" + lng + "&unite=" + unit;
                 return request(path);
             }
-       function forcastByCityName(cityName, days, units) {
+       function forecastByCityName(cityName, days, units) {
                 var u = units || 'metric'; 
                 var d = normalizeDays(days);
 
                 var path = "/forecast/daily?APPID=" + APPID + "&q=" + cityName + "&cnt=" + d + "&units=metric&mode=json";
                 return request(path);
             }
-       function forcastByCityId (cityId, days, units) {
+       function forecastByCityId (cityId, days, units) {
                 var u = units || 'metric'; 
                 var d = normalizeDays(days);
 
