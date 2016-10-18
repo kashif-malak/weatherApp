@@ -1,4 +1,4 @@
-/// <reference path="app/weatherpage/forecast-filter.js" />
+/// <reference path="app/services/weath-forcast.service.js" />
 
 //jshint strict: false
 module.exports = function(config) {
@@ -13,10 +13,13 @@ module.exports = function(config) {
       'bower_components/angular-ui-router/release/angular-ui-router.min.js',
       //'bower_components/angular-resource/angular-resource.min.js',
       'bower_components/angular-animate/angular-animate.min.js',
-      'app.js',
+      './app.js',
       'tests/**/*.js',
       'main/main.controller.js',
       'services/AppConstants.js',
+      'services/geoloc.service.js',
+      'services/weath-forcast.service.js',
+      'services/*.js',
       'weatherpage/weather.state.js',
       'weatherpage/forecast-filter.js',
       'weatherpage/*.js'

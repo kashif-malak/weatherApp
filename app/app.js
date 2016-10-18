@@ -3,7 +3,6 @@
 
     angular.module('geoWeather', [
       'ui.router',
-      'ngResource',
       'ngAnimate',
       'geoWeather.main',
       'geoWeather.weather',

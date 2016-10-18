@@ -1,8 +1,8 @@
 ﻿describe('it connect to api.openweathermap.org/data/2.5 ', function () {
     
-    var mockUserResource, $httpBackend, serviceEndPoint, geolocation;
+    var mockUserResource, $httpBackend, serviceEndPoint;
     beforeEach(angular.mock.module('geoWeather'));
-    beforeEach(angular.mock.module('geoWeather.main'));
+    
     beforeEach(function () {
         angular.mock.inject(function ($injector) {
            
@@ -10,9 +10,9 @@
             mockService = $injector.get('WeatherjsonpSvc');
             appConstants = $injector.get('AppConstants');
             $templateCache = $injector.get('$templateCache');
-           // $templateCache.put('main/main.html', 'main.html');
-           // $templateCache.put('weatherpage/weather-page.html', 'weather-page.html');
-            geolocation = $injector.get("GeolocationService");
+            $templateCache.put('main/main.html', 'main.html');
+            $templateCache.put('weatherpage/weather-page.html', 'weather-page.html');
+         
             serviceEndPoint = appConstants.OPENWEATH_URL + "/weather?APPID=" + appConstants.APIKEY;
 
         })
