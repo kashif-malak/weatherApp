@@ -8,12 +8,13 @@ To install dependecies.
 npm install
 ```````````
 
-To run
+To run.
 ``````````````
 npm start
 ``````````
 
-To run unit testes
+To run unit tests.
+
 ``````````````
 npm test
 ``````````````
