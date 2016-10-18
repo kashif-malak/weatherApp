@@ -15,7 +15,7 @@ module.exports = function(config) {
       'bower_components/angular-animate/angular-animate.min.js',
       './app.js',
       'tests/**/*.js',
-      'main/main.js',
+      'main/main.controller.js',
       'services/AppConstants.js',
       'weatherpage/weather.state.js',
       'weatherpage/forecast-filter.js',
