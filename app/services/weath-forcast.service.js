@@ -60,7 +60,7 @@
 
         function forecastByPosition (lat, lng, units) {
                 var unit = units || 'metric';
-                var path = "/forecast/daily?APPID=" + APPID + "&lat=" + lat + "&lon=" + lng + "&unite=" + unit;
+                   var path = "/forecast/daily?APPID=" + APPID + "&lat=" + lat + "&lon=" + lng + "&units=metric";
                 return request(path);
             }
        function forecastByCityName(cityName, days, units) {
