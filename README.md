@@ -8,12 +8,16 @@ To install dependecies.
 npm install
 ```````````
 
+To run.
+``````````````
+npm start
+``````````
 
+To run unit tests.
 
-
-
-
-this project is based on angular-seed project by angular team.
+``````````````
+npm test
+``````````````
 
 
 
